@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMW - Головна</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="navigation.css"> 
+</head>
+
+<body>
+    <header>
+        <h1>Вітаємо на сайті BMW</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="quiz.html"> &#214; Опитувальник</a></li>
+                <li><a href="news.html">&#8469; Новини</a></li>
+                <li><a href="achievements.html">&#x1D4A2; Досягнення</a></li>
+                <li>
+                    <a href="#">Реєстрація <span class="icon">&#9660;</span></a>
+                    <ul class="submenu">
+                        <li><a href="register.html">Створити акаунт</a></li>
+                        <li><a href="terms.html">Умови реєстрації</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="auth-buttons">
+                <a href="login.html" class="btn">Вхід</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="search-container">
+        <div class="search-bar">
+            <input type="text" placeholder="Пошук..." />
+            <button type="submit">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                    <path d="M21.71 20.29l-5.388-5.388A7.967 7.967 0 0018 10a8 8 0 10-8 8 7.967 7.967 0 004.902-1.679l5.388 5.388a1 1 0 001.42-1.42zM10 16a6 6 0 116-6 6.007 6.007 0 01-6 6z"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <div class="main">
+        <section class="grid-section">
+            <h2>Про BMW</h2>
+            <p><big>BMW</big> <strong>(Bayerische Motoren Werke AG)</strong> — німецький виробник автомобілів, мотоциклів та
+                двигунів. Компанія відома своїм інноваційним підходом до створення високоякісних автомобілів. Заснована в
+                1916 році в Мюнхені, Німеччина, BMW почала свій шлях як виробник авіаційних двигунів, але вже понад століття
+                компанія славиться своїми автомобілями преміум-класу та мотоциклами.</p>
+            <i>Компанія BMW стала уособленням німецької інженерної досконалості та інноваційного підходу до виробництва.
+                Основна філософія бренду — це поєднання потужності, динаміки та розкоші, що дозволяє створювати автомобілі,
+                які дарують водієві неперевершене відчуття від водіння.</i>
+            <br>
+
+            <div class="image-container">
+                <img src="bmw.jpg" alt="BMW">
+                <div class="overlay">
+                    <p>BMW - Найвища якість і розкіш</p>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section class="flex-section">
+            <h2>Що робить BMW особливим?</h2>
+            <div class="feature">
+                <strong>1 Інновації та технології:</strong> BMW постійно впроваджує новітні технології, такі як система
+                <ins>iDrive</ins>, яка дозволяє керувати багатьма функціями автомобіля за допомогою одного контролера.
+            </div>
+            <div class="feature">
+                <strong>2 Дизайн:</strong> Автомобілі BMW відомі своїм елегантним і спортивним дизайном. Вони поєднують в собі
+                естетику та функціональність, що робить їх привабливими для багатьох автолюбителів.
+            </div>
+            <div class="feature">
+                <strong>3 Продуктивність:</strong> BMW славиться своїми потужними двигунами та відмінною керованістю. Вони
+                пропонують широкий спектр моделей від компактних автомобілів до розкішних седанів і спортивних автомобілів.
+            </div>
+            <div class="feature">
+                <strong>4 Екологічність:</strong> Компанія активно працює над зменшенням впливу на навколишнє середовище,
+                розробляючи електричні та <ins>гібридні моделі</ins>, такі як BMW i3 та i8.
+            </div>
+        </section>
+
+        <button class="button" id="button-top" onclick="scrollToTop()">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="50" height="50">
+                <path d="M12 22L12 6M12 6L8 10M12 6L16 10" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 BMW. Всі права захищені.</p>
+    </footer>
+
+    <script>
+        let btn = document.getElementById("button-top");
+
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                btn.style.display = "block";
+            } else {
+                btn.style.display = "none";
+            }
+        }
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+
+</html>
